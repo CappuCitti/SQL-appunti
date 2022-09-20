@@ -1,7 +1,3 @@
-<img src="./data/file-csv-solid.svg"
-  width="128"
-  height="128"
-  style="float:left;">
 ## I file CSV
 **Comma Separated Values**<br>
 Il formato CSV rappresenta uno dei modi più semplici per rappresentare dati in forma tabellare all'interno di un semplice file di testo.
@@ -35,7 +31,7 @@ Icona | Definizione
 ⬜ | Entita' (Collezione di oggetti con gli stessi valori)
 -⚫ | Attributo chiave (Identifica un elemento all'interno dell'entita)
 -⚪ | Attributo
--<>- | [Relazione](##Tipi-di-relazione) (Sono collagamenti tra entita')
+-<>- | [Relazione](#Tipi-di-relazione) (Sono collagamenti tra entita')
 (card. minima, card. mssima) | Cardinalita' (in che modo una entita' partecipa alla relazione)
 
 **Cardinalita' minima**
