@@ -65,7 +65,7 @@ Operator | Description
 `<>` | Diverso da
 `BETWEEN` | Compreso tra
 `LIKE` | [Pattern](#like)
-`IN` | Specifica le colonne da filtrare
+`IN` | Specifica le parole da filtrare dalla colonna desiderata
 
 ### `LIKE`
 Esistono due caratteri *Jolly*:
