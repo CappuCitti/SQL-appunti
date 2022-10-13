@@ -135,18 +135,18 @@
     2. i nomi delle ricette che utilizzano almeno 70 gr di pangrattato. Visualizzare anche il mese e
     l’anno della rivista in cui si trova la ricetta.
     3. i nomi delle ricette dove non c’è il latte
-        ![Esercizio_3c](./../data/images/Esercizio3/es3-c.png)
+        ![Esercizio_3c](./../data/images/Esercizio3/Es3-c.png)
     4. i nomi delle ricette in cui c’è dell’olio
-        ![Esercizio_3d](./../data/images/Esercizio3/es3-d.png)
+        ![Esercizio_3d](./../data/images/Esercizio3/Es3-d.png)
     5. il numero di ingredienti per ogni ricetta
-        ![Esercizio_3e](./../data/images/Esercizio3/es3-e.png)
+        ![Esercizio_3e](./../data/images/Esercizio3/Es3-e.png)
     6. i nomi delle ricette con più di 10 ingredienti. Visualizzare anche il mese e l’anno della rivista in
     cui si trova la ricetta.
-        ![Esercizio_3f](./../data/images/Esercizio3/es3-f.png)
+        ![Esercizio_3f](./../data/images/Esercizio3/Es3-f.png)
     7. il tempo medio necessario per la preparazione delle ricette “Facili”
-        ![Esercizio_3g](./../data/images/Esercizio3/es3-g.png)
+        ![Esercizio_3g](./../data/images/Esercizio3/Es3-g.png)
     8. il nome della ricetta con più calorie. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.
-        ![Esercizio_3h](./../data/images/Esercizio3/es3-h.png)
+        ![Esercizio_3h](./../data/images/Esercizio3/Es3-h.png)
     ```sql
     -- a
     SELECT Ricette.Nome, Rivista.Mese, Rivista.Anno FROM Ricette
