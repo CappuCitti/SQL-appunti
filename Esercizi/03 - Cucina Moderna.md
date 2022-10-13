@@ -134,18 +134,17 @@
     1. i nomi delle ricette che hanno tra gli ingredienti il pangrattato. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.
     2. i nomi delle ricette che utilizzano almeno 70 gr di pangrattato. Visualizzare anche il mese e
     l’anno della rivista in cui si trova la ricetta.
-    3. i nomi delle ricette dove non c’è il latte
+    3. i nomi delle ricette dove non c’è il latte<br>
         ![Esercizio_3c](./../data/images/Esercizio3/Es3-c.PNG)
-    4. i nomi delle ricette in cui c’è dell’olio
+    4. i nomi delle ricette in cui c’è dell’olio<br>
         ![Esercizio_3d](./../data/images/Esercizio3/Es3-d.PNG)
-    5. il numero di ingredienti per ogni ricetta
+    5. il numero di ingredienti per ogni ricetta<br>
         ![Esercizio_3e](./../data/images/Esercizio3/Es3-e.PNG)
-    6. i nomi delle ricette con più di 10 ingredienti. Visualizzare anche il mese e l’anno della rivista in
-    cui si trova la ricetta.
+    6. i nomi delle ricette con più di 10 ingredienti. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
         ![Esercizio_3f](./../data/images/Esercizio3/Es3-f.PNG)
-    7. il tempo medio necessario per la preparazione delle ricette “Facili”
+    7. il tempo medio necessario per la preparazione delle ricette “Facili”<br>
         ![Esercizio_3g](./../data/images/Esercizio3/Es3-g.PNG)
-    8. il nome della ricetta con più calorie. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.
+    8. il nome della ricetta con più calorie. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
         ![Esercizio_3h](./../data/images/Esercizio3/Es3-h.PNG)
     ```sql
     -- a
@@ -226,7 +225,7 @@
       SELECT MAX(Ricette.Calorie) FROM Ricette
     );
     ```
-9.  eliminare le ricette che hanno un numero di calorie superiori a 300
+1.  eliminare le ricette che hanno un numero di calorie superiori a 300
     ```sql
     DELETE FROM Pubblicazioni
     WHERE IDRic IN (
@@ -243,7 +242,7 @@
     DELETE FROM Ricette
     WHERE Ricette.Calorie > 300;
     ```
-10. eliminare le foreign key (solo quelle)
+2.  eliminare le foreign key (solo quelle)
     ```sql
     ALTER TABLE Ricette_Ingrediente
     DROP COLUMN IDric;
@@ -257,7 +256,7 @@
     ALTER TABLE Pubbl
     DROP COLUMN IDriv;
     ```
-11. eliminare le tabelle create
+3.  eliminare le tabelle create
     ```sql
     DROP TABLE Ricette_Ingrediente;
     DROP TABLE Pubbl;
