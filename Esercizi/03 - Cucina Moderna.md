@@ -1,5 +1,7 @@
 1. progettare il modello ER per questa situazione
+    ![Modello ER](./../data/images/Esercizio3/M_ER.jpg)
 2. scrivere il modello logico corrispondente al modello ER proposto
+    ![Modello Logico](./../data/images/Esercizio3/M_Logigo.jpg)
 3. creare le tabelle con le varie primary key ma senza le foreign key e permettendo che tutti i campi possano essere `NULL`
     ```sql
     CREATE TABLE Ricette (
@@ -47,7 +49,7 @@
 6. inserire le seguenti informazioni presenti nella rivista pubblicata nel febbraio del 2019:
     1. a pagina 34 è stata pubblicata la
     ricetta della foto iniziale
-    2. a pagina 55 della stessa rivista è stata pubblicata la ricetta “Dentice al forno in crosta di mandorle”
+    1. a pagina 55 della stessa rivista è stata pubblicata la ricetta “Dentice al forno in crosta di mandorle”
     ```sql
     -- a
     INSERT INTO Rivista VALUES (2019, 2);
@@ -134,17 +136,17 @@
     1. i nomi delle ricette che hanno tra gli ingredienti il pangrattato. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.
     2. i nomi delle ricette che utilizzano almeno 70 gr di pangrattato. Visualizzare anche il mese e
     l’anno della rivista in cui si trova la ricetta.
-    3. i nomi delle ricette dove non c’è il latte<br>
+    1. i nomi delle ricette dove non c’è il latte<br>
         ![Esercizio_3c](./../data/images/Esercizio3/Es3-c.PNG)
-    4. i nomi delle ricette in cui c’è dell’olio<br>
+    2. i nomi delle ricette in cui c’è dell’olio<br>
         ![Esercizio_3d](./../data/images/Esercizio3/Es3-d.PNG)
-    5. il numero di ingredienti per ogni ricetta<br>
+    3. il numero di ingredienti per ogni ricetta<br>
         ![Esercizio_3e](./../data/images/Esercizio3/Es3-e.PNG)
-    6. i nomi delle ricette con più di 10 ingredienti. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
+    4. i nomi delle ricette con più di 10 ingredienti. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
         ![Esercizio_3f](./../data/images/Esercizio3/Es3-f.PNG)
-    7. il tempo medio necessario per la preparazione delle ricette “Facili”<br>
+    5. il tempo medio necessario per la preparazione delle ricette “Facili”<br>
         ![Esercizio_3g](./../data/images/Esercizio3/Es3-g.PNG)
-    8. il nome della ricetta con più calorie. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
+    6. il nome della ricetta con più calorie. Visualizzare anche il mese e l’anno della rivista in cui si trova la ricetta.<br>
         ![Esercizio_3h](./../data/images/Esercizio3/Es3-h.PNG)
     ```sql
     -- a
@@ -225,7 +227,7 @@
       SELECT MAX(Ricette.Calorie) FROM Ricette
     );
     ```
-1.  eliminare le ricette che hanno un numero di calorie superiori a 300
+9.  eliminare le ricette che hanno un numero di calorie superiori a 300
     ```sql
     DELETE FROM Pubblicazioni
     WHERE IDRic IN (
@@ -242,7 +244,7 @@
     DELETE FROM Ricette
     WHERE Ricette.Calorie > 300;
     ```
-2.  eliminare le foreign key (solo quelle)
+10. eliminare le foreign key (solo quelle)
     ```sql
     ALTER TABLE Ricette_Ingrediente
     DROP COLUMN IDric;
@@ -256,7 +258,7 @@
     ALTER TABLE Pubbl
     DROP COLUMN IDriv;
     ```
-3.  eliminare le tabelle create
+11. eliminare le tabelle create
     ```sql
     DROP TABLE Ricette_Ingrediente;
     DROP TABLE Pubbl;
