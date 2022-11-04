@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container mt-3">
+    <form class="form-inline" action="/" method="post" id="theForm">
+      <div class="mb-1">
+        <label for="inputnumber" class="sr-only">Select a number</label>
+
+        <select id="inputnumber" name="inputnumber" class="form-select" autofocus>
+          <option value="0" {% if number_selected == 0 %}selected{% endif %}>1</option>
+          <option value="1" {% if number_selected == 1 %}selected{% endif %}>2</option>
+          <option value="2" {% if number_selected == 2 %}selected{% endif %}>3</option>
+        </select>
+      </div>
+    </form>
+
+    {{graph|safe}}
+
+    <img src="./graph.png" alt="graph" class="img-thumbnail mx-auto d-block">
+  </div>
+</body>
+<script>
+  const el = document.getElementById("inputnumber");
+  const form = document.getElementById("theForm");
+  el.onchange = () => {
+    form.submit();
+  };
+</script>
+<style>
+  th {
+    text-align: start;
+  }
+</style>
+
+</html>
