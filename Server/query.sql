@@ -4,6 +4,7 @@ INNER JOIN production.categories
 ON production.products.category_id = production.categories.category_id
 GROUP BY production.products.category_id, production.categories.category_name
 
+
 -- Numero di ordini per ogni store, sia in formato tabellare sia in forma di grafico a barre orizzontali
 SELECT sales.stores.store_name, COUNT(*) AS NumeroOrdini FROM sales.stores
 INNER JOIN sales.orders

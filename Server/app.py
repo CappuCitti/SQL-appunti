@@ -75,7 +75,7 @@ def home():
         FigureCanvas(fig).print_png(output)
         graph = output.getvalue()
 
-        return render_template('newhome.html', graph=df.to_html(classes='table table-striped', border=0), number_selected=number_selected)
+        return render_template('home.html', graph=df.to_html(classes='table table-striped', border=0), number_selected=number_selected)
 
     elif request.method == "POST":
         number = request.form.get('inputnumber')
@@ -87,11 +87,6 @@ def home():
 @app.route("/getbyname")
 def getbyname():
     global product_selected
-
-    # cur = conn.cursor(as_dict=True)
-    # cur.execute("SELECT * FROM production.products WHERE product_name LIKE %s", f"%{product_selected}%")
-    # df = pd.DataFrame(cur.fetchall())
-
     df = pd.read_sql("SELECT * FROM production.products WHERE product_name LIKE %(q)s", conn, params={"q": f"%{product_selected}%"})
 
     return render_template('getByName.html', graph=df.to_html(classes='table table-striped', border=0), product_selected=product_selected)
