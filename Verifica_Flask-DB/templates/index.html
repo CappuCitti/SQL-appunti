@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>user info by ID</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container mt-3">
+    <form class="form-inline" action="/" method="post">
+      <div class="mb-1">
+        <input type="number" name="user_id" id="user_id" placeholder="Select a user for edit data" class="form-control"
+          autofocus autocomplete="false", value="{{user_id}}">
+      </div>
+    </form>
+
+    {% if display_error == True %}
+      <div class="alert alert-danger" role="alert">Questo utente non esiste</div>
+    {% endif %}
+    {% if data_edit == True %}
+     <div class="alert alert-success" role="alert">Questo utente e' stato modificato con successo</div>
+    {% endif %}
+
+    <form class="row g-3 needs-validation" action="/edit" method="post">
+      <div class="col-md-6">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" value="{{first_name}}" name="first_name">
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" value="{{last_name}}" name="last_name">
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom01" class="form-label">Phone</label>
+        <input type="tel" class="form-control" value="{{phone}}" name="phone">
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom02" class="form-label">Email</label>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" value="{{email}}" name="email">
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom03" class="form-label">Street</label>
+        <input type="text" class="form-control" value="{{street}}" name="street">
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" value="{{city}}" name="city">
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <input type="text" class="form-control" value="{{state}}" name="state">
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" pattern="^[0-9]{5}(?:-[0-9]{4})?$" class="form-control" value="{{zip_code}}" name="zip_code">
+      </div>
+      <div class="col-12">
+        <input type="submit" value="Submit data" class="btn btn-primary">
+      </div>
+      <input type="text" class="form-control" value="{{user_id}}" name="customer_id" hidden>
+    </form>
+  </div>
+</body>
+
+<style>
+  th {
+    text-align: start;
+  }
+</style>
+
+</html>
