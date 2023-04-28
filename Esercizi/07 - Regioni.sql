@@ -35,7 +35,7 @@ INSERT INTO italy.regions (name, capoluogo) VALUES
 ('Umbria', 'Perugia'),
 ('Veneto', 'Venice');
 
-INSERT INTO italy.regions_borders (id_region, id_border)VALUES
+INSERT INTO italy.regions_borders (id_region, id_border) VALUES
 (13, 7),
 (13, 14),
 (15, 3),
@@ -139,7 +139,7 @@ WHERE id = (
 SELECT SUM(surface) FROM italy.regions;
 
 -- 6
-SELECT italy.regions.surface / SUM(italy.regions.surface) OVER() * 100 as percentage FROM italy.regions
+SELECT name, (italy.regions.surface + 0.0) / SUM(italy.regions.surface) OVER() * 100 as percentage FROM italy.regions
 ORDER BY percentage DESC;
 
 
